@@ -1,5 +1,25 @@
 # SendingMail and ReceivingMail Applications
 
+
+**Disclaimer**
+
+
+
+---
+## Instructions
+
+Compile the sender with the following commands:
+``` sh
+javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail.java SendingProperties.java Account.java Email.java
+java -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail
+```
+
+Compile the receiver with the following commands:
+``` sh
+javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail.java ReceivingProperties.java Account.javajava -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail
+```
+
+## Description
 For my **SendingMail** application, I used the Gmail SMTP server, making use of SSL to ensure the communication between the two applications had the necessary privacy and that the integrity of the data was kept intact.
 
 For my **ReceivingMail** application, I used the Gmail SMTP server which made use of SSL, ensuring that the communication between my application and Google's mailing application had necessary privacy and that data integrity was provided between the two. I also used the IMAP (Internet Message Access Protocol) to retrieve the messages from the client's inbox via the server.
