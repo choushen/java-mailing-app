@@ -1,5 +1,35 @@
-# SendingMail and ReceivingMail Applications
+ # SendingMail and ReceivingMail Applications
 
+
+**Disclaimer**
+
+I wrote this a long time ago so for it to work you have to do the following:
+Go to your Google Account Security page.
+Under "Less secure app access", click "Turn on access" and toggle the switch to turn it on.
+
+---
+
+I wanted to push this code up while explaining SMTP, which served as an example.
+
+---
+## Instructions
+
+Compile the sender with the following commands:
+``` sh
+javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail.java SendingProperties.java Account.java Email.java
+
+java -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail
+```
+
+Compile the receiver with the following commands:
+``` sh
+javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail.java ReceivingProperties.java Account.java
+
+java -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail
+
+```
+
+## Description
 For my **SendingMail** application, I used the Gmail SMTP server, making use of SSL to ensure the communication between the two applications had the necessary privacy and that the integrity of the data was kept intact.
 
 For my **ReceivingMail** application, I used the Gmail SMTP server which made use of SSL, ensuring that the communication between my application and Google's mailing application had necessary privacy and that data integrity was provided between the two. I also used the IMAP (Internet Message Access Protocol) to retrieve the messages from the client's inbox via the server.
