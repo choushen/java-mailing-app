@@ -1,9 +1,15 @@
-# SendingMail and ReceivingMail Applications
+ # SendingMail and ReceivingMail Applications
 
 
 **Disclaimer**
 
+I wrote this a long time ago so for it to work you have to do the following:
+Go to your Google Account Security page.
+Under "Less secure app access", click "Turn on access" and toggle the switch to turn it on.
 
+---
+
+I wanted to push this code up while explaining SMTP, which served as an example.
 
 ---
 ## Instructions
@@ -11,12 +17,16 @@
 Compile the sender with the following commands:
 ``` sh
 javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail.java SendingProperties.java Account.java Email.java
+
 java -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar SendingMail
 ```
 
 Compile the receiver with the following commands:
 ``` sh
-javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail.java ReceivingProperties.java Account.javajava -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail
+javac -cp ../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail.java ReceivingProperties.java Account.java
+
+java -cp .:../lib/javax.mail.jar:../lib/jakarta.activation-1.2.1.jar ReceivingMail
+
 ```
 
 ## Description
